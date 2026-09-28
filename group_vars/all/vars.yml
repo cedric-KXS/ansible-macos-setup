@@ -1,0 +1,74 @@
+---
+# User configuration
+user_name: "{{ ansible_facts['user_id'] }}"
+user_home: "{{ ansible_facts['env']['HOME'] }}"
+
+# Homebrew
+homebrew_taps:
+  - hashicorp/tap
+  - terraform-linters/tap
+
+homebrew_formulae:
+  - ansible
+  - bat
+  - fd
+  - fish
+  - fzf
+  - gh
+  - git
+  - git-crypt
+  - go-task
+  - hashicorp/tap/terraform
+  - htop
+  - jq
+  - pre-commit
+  - ripgrep
+  - starship
+  - terraform-linters/tap/tflint
+  - tfenv
+  - tldr
+  - tree
+  - wget
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+
+homebrew_casks:
+  - 1password
+  - docker-desktop
+  - font-fira-code-nerd-font
+  - ghostty
+  - mos
+  - signal
+  - the-unarchiver
+  - visual-studio-code
+
+# Mac App Store (requires `mas` formula)
+mas_apps: {}
+
+mas_email: ""
+mas_signin_dialog: false
+
+# macOS Defaults
+macos_defaults_computername: "KAN8729"
+
+# Dock
+dock_apps: []
+#  - /Applications/Safari.app
+#  - /System/Applications/Mail.app
+#  - /Applications/iTerm.app
+
+dock_icon_size: 32
+dock_autohide: false
+dock_minimize_to_application: true
+dock_show_recents: false
+
+# Git
+git_user_name: "Cedric GHIOT"
+git_user_email: "cghiot@kinaxis.com"
+git_default_branch: "main"
+git_editor: "code"
+
+# SSH (managed by 1Password agent)
+
+# Shell
+shell_fish_path: "{{ '/opt/homebrew' if ansible_facts['machine'] == 'arm64' else '/usr/local' }}/bin/fish"
