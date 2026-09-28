@@ -41,6 +41,14 @@
     create: true
     mode: "0644"
 
+- name: Ensure homebrew path is first
+  ansible.builtin.lineinfile:
+    path: "{{ user_home }}/.config/fish/config.fish"
+    line: "fish_add_path -g --prepend /opt/homebrew/bin"
+    create: true
+    mode: "0644"
+
+
 - name: Ensure GitHub token is set in fish config
   ansible.builtin.lineinfile:
     path: "{{ user_home }}/.config/fish/conf.d/tokens.fish"
