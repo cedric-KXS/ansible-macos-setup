@@ -19,6 +19,12 @@ $battery\
 $line_break\
 $character"""
 
+[shell]
+bash_indicator = ''
+fish_indicator = ''
+zsh_indicator = ''
+powershell_indicator = ''
+
 [character]
 success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
@@ -67,11 +73,12 @@ style = "bold green"
 
 [python]
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-symbol = "🐍 "
+symbol = " "
+style = "bold green"
 
 [nodejs]
 format = "[$symbol($version )]($style)"
-symbol = " "
+symbol = "󰎙 "
 
 [rust]
 format = "[$symbol($version )]($style)"
@@ -79,11 +86,11 @@ symbol = "🦀 "
 
 [golang]
 format = "[$symbol($version )]($style)"
-symbol = " "
+symbol = "󰟓 "
 
 [java]
 format = "[$symbol($version )]($style)"
-symbol = " "
+symbol = " "
 
 [docker_context]
 format = "[$symbol$context]($style) "
@@ -91,7 +98,10 @@ symbol = "🐳 "
 only_with_files = true
 
 [terraform]
+disabled = true
 format = "[$symbol$workspace]($style) "
+symbol = " "
+style = "bold cyan"
 
 [aws]
 format = '[$symbol($profile )(\($region\) )]($style)'

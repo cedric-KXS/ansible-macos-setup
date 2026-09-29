@@ -41,6 +41,13 @@
     create: true
     mode: "0644"
 
+- name: Ensure starship init is in PowerShell config
+  ansible.builtin.lineinfile:
+    path: "{{ user_home }}/.config/powershell/Microsoft.PowerShell_profile.ps1"
+    line: "Invoke-Expression (&starship init powershell)"
+    create: true
+    mode: "0644"
+
 - name: Ensure homebrew path is first
   ansible.builtin.lineinfile:
     path: "{{ user_home }}/.config/fish/config.fish"
@@ -61,3 +68,4 @@
     dest: "{{ user_home }}/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty"
     mode: "0644"
     backup: true
+    

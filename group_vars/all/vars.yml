@@ -39,6 +39,7 @@ homebrew_casks:
   - docker-desktop
   - font-fira-code-nerd-font
   - ghostty
+  - grammarly-desktop
   - mos
   - signal
   - the-unarchiver
