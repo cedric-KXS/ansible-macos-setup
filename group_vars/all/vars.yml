@@ -28,6 +28,7 @@ homebrew_formulae:
   - tfenv
   - tldr
   - tree
+  - uv
   - wget
   - zsh-autosuggestions
   - zsh-syntax-highlighting
