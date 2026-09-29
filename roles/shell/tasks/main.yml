@@ -48,10 +48,16 @@
     create: true
     mode: "0644"
 
-
 - name: Ensure GitHub token is set in fish config
   ansible.builtin.lineinfile:
     path: "{{ user_home }}/.config/fish/conf.d/tokens.fish"
     line: "set -x GITHUB_TOKEN (gh auth token)"
     create: true
     mode: "0644"
+
+- name: Deploy Ghostty configuration
+  ansible.builtin.copy:
+    src: config.ghostty
+    dest: "{{ user_home }}/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty"
+    mode: "0644"
+    backup: true

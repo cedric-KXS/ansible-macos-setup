@@ -21,6 +21,7 @@ homebrew_formulae:
   - hashicorp/tap/terraform
   - htop
   - jq
+  - powershell
   - pre-commit
   - ripgrep
   - starship
