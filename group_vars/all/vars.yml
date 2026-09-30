@@ -41,6 +41,7 @@ homebrew_casks:
   - ghostty
   - grammarly-desktop
   - mos
+  - rectangle
   - signal
   - the-unarchiver
   - visual-studio-code
