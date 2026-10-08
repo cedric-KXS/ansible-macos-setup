@@ -7,10 +7,14 @@ user_home: "{{ ansible_facts['env']['HOME'] }}"
 homebrew_taps:
   - hashicorp/tap
   - terraform-linters/tap
+  - auth0/auth0-cli
 
 homebrew_formulae:
   - ansible
+  - ansible-lint
+  - auth0
   - bat
+  - espanso
   - fd
   - fish
   - fzf
@@ -19,11 +23,14 @@ homebrew_formulae:
   - git-crypt
   - go-task
   - hashicorp/tap/terraform
+  - hashicorp/tap/vault
   - htop
   - jq
+  - maccy
   - powershell
   - pre-commit
   - ripgrep
+  - shellcheck
   - starship
   - terraform-linters/tap/tflint
   - tfenv
@@ -33,11 +40,14 @@ homebrew_formulae:
   - wget
   - zsh-autosuggestions
   - zsh-syntax-highlighting
+  
 
 homebrew_casks:
   - 1password
+  - azure-cli
   - docker-desktop
   - font-fira-code-nerd-font
+  - gcloud-cli
   - ghostty
   - grammarly-desktop
   - mos

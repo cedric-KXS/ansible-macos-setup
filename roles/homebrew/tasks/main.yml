@@ -3,6 +3,7 @@
   community.general.homebrew_tap:
     name: "{{ item }}"
     state: present
+    trust: true
   loop: "{{ homebrew_taps }}"
 
 - name: Ensure Homebrew formulae

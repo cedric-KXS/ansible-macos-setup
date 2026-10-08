@@ -68,4 +68,11 @@
     dest: "{{ user_home }}/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty"
     mode: "0644"
     backup: true
+
+- name: Deploy Fish abbreviations
+  ansible.builtin.copy:
+    src: fish.abbr.fish
+    dest: "{{ user_home }}/.config/fish/conf.d/abbreviations.fish"
+    mode: "0644"
+    backup: true
     
