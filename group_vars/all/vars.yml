@@ -17,6 +17,7 @@ homebrew_formulae:
   - espanso
   - fd
   - fish
+  - fnm
   - fzf
   - gh
   - git

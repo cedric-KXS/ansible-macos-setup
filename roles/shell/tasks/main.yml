@@ -75,4 +75,11 @@
     dest: "{{ user_home }}/.config/fish/conf.d/abbreviations.fish"
     mode: "0644"
     backup: true
+
+- name: Deploy fnm configuration
+  ansible.builtin.copy:
+    src: fnm.fish
+    dest: "{{ user_home }}/.config/fish/conf.d/fnm.fish"
+    mode: "0644"
+    backup: true
     
