@@ -10,10 +10,12 @@ homebrew_taps:
   - auth0/auth0-cli
 
 homebrew_formulae:
+  - actionlint
   - ansible
   - ansible-lint
   - auth0
   - bat
+  - delta
   - espanso
   - fd
   - fish
@@ -27,7 +29,9 @@ homebrew_formulae:
   - hashicorp/tap/vault
   - htop
   - jq
+  - lazygit
   - maccy
+  - ngrok
   - powershell
   - pre-commit
   - ripgrep
