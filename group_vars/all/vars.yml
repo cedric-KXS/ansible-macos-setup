@@ -5,14 +5,16 @@ user_home: "{{ ansible_facts['env']['HOME'] }}"
 
 # Homebrew
 homebrew_taps:
+  - atlassian/homebrew-acli
+  - auth0/auth0-cli
   - hashicorp/tap
   - terraform-linters/tap
-  - auth0/auth0-cli
 
 homebrew_formulae:
   - actionlint
   - ansible
   - ansible-lint
+  - atlassian/acli/acli
   - auth0
   - bat
   - delta
@@ -45,7 +47,6 @@ homebrew_formulae:
   - wget
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-  
 
 homebrew_casks:
   - 1password
